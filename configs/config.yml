@@ -1,0 +1,33 @@
+server:
+  name: go-mongo-rest-api
+  port: 8080
+
+mongo:
+  uri: mongodb+srv://tube:abcd1234@cluster0.cirxd.mongodb.net/tube?retryWrites=true&w=majority
+  database: tube
+
+cassandra:
+  uri: 127.0.0.1
+  username: cassandra
+  password: cassandra
+
+postgre:
+  driver: postgres
+  data_source_name: user=postgres password=postgres dbname=tube sslmode=disable
+
+openDb: 3
+
+log:
+  level: info
+  map:
+    time: "@timestamp"
+    msg: message
+
+middleware:
+  log: true
+  skips: /health
+  request: request
+  response: response
+  size: size
+  
+key: AIzaSyDVRw8jjqyJWijg57zXSOMpUArlZGpC7bE
